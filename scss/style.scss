@@ -12,6 +12,19 @@ body{
     padding: 36px 28px 76px 28px;
     box-sizing: border-box;
 
+    @media (max-width: 1400px) {
+        width: 200px;
+    }
+
+    @media (max-width: 1300px) {
+        width: 100px;
+    }
+
+    @media (max-width: 768px){
+        padding: 35px;
+        height: 100%;
+    }
+
     .aside__up{
         display: flex;
         align-items: center;
@@ -25,6 +38,10 @@ body{
 
         .aside__up__text{
             display: flex;
+
+            @media (max-width: 1400px) {
+                display: none;
+            }
 
             .aside__up__title{
                 font-size: 26px;
@@ -54,6 +71,12 @@ body{
         gap: 18px;
         margin-bottom: 597px;
 
+        @media (max-width: 768px){
+            justify-content: center;
+            margin-bottom: 70px;
+            gap: 30px
+        }
+
         .aside__nav__item{
             color: rgb(145, 151, 179);  
             display: flex;
@@ -62,6 +85,11 @@ body{
             font-weight: 500;
             padding: 11px 8px 11px 11px;
             justify-content: space-between;
+
+            @media (max-width: 768px){
+                padding: 0px;
+                justify-content: center;
+            }
 
             .aside__nav__item__left{
                 display: flex;
@@ -72,6 +100,10 @@ body{
 
             .mark{
                 font-size: 20px;
+
+                @media (max-width: 768px){
+                    font-size: 30px;
+                }
             }
 
             &:hover{
@@ -118,6 +150,12 @@ body{
 
 }
 
+@media (max-width: 1300px) {
+    .aside__nav__item__text, .arrow, .aside__up__title, .aside__up__span, .aside__down__name, .aside__down__pos{
+        display: none;
+    }
+}
+
 
 .main{
     padding-left: 71px;
@@ -125,6 +163,18 @@ body{
     flex-grow: 1;
     padding-top: 41px;
     padding-bottom: 258px;
+
+    @media (max-width: 1300px) {
+        height: 100vh;
+        padding-left: 30px;
+        padding-right: 30px;
+        padding-bottom: 50px;
+    }
+
+    @media (max-width: 768px){
+        height: 100%;
+    }
+
 
     box-sizing: border-box;
 
@@ -139,10 +189,12 @@ body{
         border-radius: 30px;
         box-shadow: 0px 10px 60px 0px rgba(226, 236, 249, 0.5);
         background-color: rgb(255, 255, 255);
-        width: 968px;
-        height: 812px;
+        max-width: 968px;
         padding-top: 30px;
-        padding-bottom: 40px;
+
+        @media (max-width: 768px){
+            margin-bottom: 150px;
+        }
     }
 
     .dash__header{
@@ -228,6 +280,37 @@ body{
                 width: 152px;
             }
 
+            @media (max-width: 1070px) {
+                &__name {
+                    max-width: 142px;
+                }
+    
+                &__company{
+                    max-width: 101px;
+                }
+    
+                &__phone{
+                    max-width: 126px;
+                }
+    
+                &__email{
+                    max-width: 177px;
+                }
+    
+                &__country{
+                    max-width: 122px;
+                }
+            }
+
+            @media (max-width: 768px) {
+                flex-wrap: wrap;
+                gap: 5px;
+                p{
+                    width: auto;
+                }
+            }
+        
+
         }
 
         .dash__block__item{
@@ -259,6 +342,39 @@ body{
             &__country{
                 width: 152px;
             }
+
+            @media (max-width: 1070px) {
+                &__name {
+                    max-width: 142px;
+                }
+    
+                &__company{
+                    max-width: 101px;
+                }
+    
+                &__phone{
+                    max-width: 126px;
+                }
+    
+                &__email{
+                   max-width: 177px;
+                }
+    
+                &__country{
+                    max-width: 122px;
+                }
+            }
+
+            @media (max-width: 768px) {
+                flex-wrap: wrap;
+                padding-left: 15px;
+                padding-right: 15px;
+                gap: 5px;
+                p{
+                    width: auto;
+                }
+            }
+        
     
             .status__active{
                 border: 1px solid rgb(0, 176, 135);
@@ -297,6 +413,13 @@ body{
         align-items: center;
         justify-content: space-between;
 
+        @media (max-width: 768px) {
+            justify-content: flex-start;
+            align-items: flex-start;
+            flex-direction: column;
+            gap: 30px
+        }
+
         .dash__footer__left__text{
             font-size: 14px;
             color: rgb(181, 183, 192);
@@ -331,4 +454,13 @@ body{
         }
     }
 
+}
+
+
+
+.main{
+    @media (max-width: 768px){
+        padding-left: 15px;
+        padding-right: 15px;
+    }
 }
